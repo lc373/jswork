@@ -1,28 +1,18 @@
-function calendar(y){
-    var w = new Date(y,0).getDay();
-    var html = '<div class="box">';
-    for (var m = 1; m <= 12; ++m){
-        html += '<table>';
-        html += '<tr class="title"><th colspan="7">' + y + '年' + m + '月</th></tr>';
-        html += '<tr><td>日</td><td>一</td><td>三</td><td>四</td><td>五</td><td>六</td></tr>';
+let year = new Date().getFullYear()
+document.getElementById("cal").innerHTML = calendar(year)
+function setCalendar(year){
+    document.getElementById('cal').innerHTML = '<div class="box" id="cal"></div>'
 
-        var max = new Date(y,m,0).getDate();
-
-        html += '<tr>';
-        for (var d = 1; d <= max; ++d){
-            if(w&&d==1){
-                html += '<td colspan="' + w + '"> </td>';
-            }
-            html += '<td>'+ d + '</td>';
-            if(w==6 && d != max){
-                html += '</tr><tr>';
-            }else if (d==max){
-                html += '</tr>';
-            }
-            w = (w + 1 > 6) ? 0 : w + 1;
-        }
-        html += '</table>';
-    }
-    html += '</div>';
-    return html;
+    var year = parseInt(year)
+    var pre = year-1
+    var next = year+1
+    // console.log(pre)
+    // console.log(next)
+    document.getElementById('curyear').setAttribute('data-year', year);
+    document.getElementById('preyear').setAttribute('data-year', pre);
+    document.getElementById('nextyear').setAttribute('data-year', next);
+    document.getElementById('curyear').innerText = year
+    document.getElementById('preyear').innerText = "<<"+pre
+    document.getElementById('nextyear').innerText = next+ ">>"
+    document.getElementById("cal").innerHTML = calendar(year)
 }
