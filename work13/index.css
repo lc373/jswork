@@ -1,0 +1,18 @@
+body {
+    margin-top: 20px;
+}
+
+.box {
+    font-family: Tahoma, simsun;
+    font-size: 12px;
+    border: 1px solid  #1678BE;
+    display: table;
+    margin: 0 auto;
+}
+
+.box-head {
+    padding: 5px 20px;
+    background-color: #2487C9;
+    color: #fff;
+    font-size
+}
