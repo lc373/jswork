@@ -8,21 +8,35 @@ body {
 }
 
 .preyear {
+<<<<<<< HEAD
     float:left;
+=======
+    float: left;
+>>>>>>> 63a90e5d136ffa23b0dcfd1428ff23d44a5173de
 }
 
 .nextyear {
     float: right;
 }
 
+<<<<<<< HEAD
 .box{
+=======
+.box {
+>>>>>>> 63a90e5d136ffa23b0dcfd1428ff23d44a5173de
     margin: 0 auto;
     width: 720px;
 }
 
+<<<<<<< HEAD
  .title {
      background: #cccc;
  }
+=======
+.title {
+    background: #ccc;
+}
+>>>>>>> 63a90e5d136ffa23b0dcfd1428ff23d44a5173de
 
 table {
     height: 160px;
